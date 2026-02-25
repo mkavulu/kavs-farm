@@ -1,38 +1,123 @@
-.App {
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fff9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Global container spacing */
+section {
+  padding: 3rem 2rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Buttons & Links */
+button, .order-btn, .hero-btn, .submit-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffcc00, #ffaa00);
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button:hover, .order-btn:hover, .hero-btn:hover, .submit-btn:hover {
+  background: linear-gradient(135deg, #ffaa00, #ff8800);
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 4px solid #ffcc00;
+}
+
+footer a {
+  color: #ffcc00;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ffaa00;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-grid, .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .product-card, .team-card {
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  button, .order-btn, .hero-btn, .submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
   }
 }
+
