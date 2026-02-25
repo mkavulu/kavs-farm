@@ -1,4 +1,37 @@
 /* =========================
+   ABOUT SECTION
+   ========================= */
+.about {
+  padding: 3rem 2rem;
+  background-color: #f9fff9;
+  color: #333;
+}
+
+/* About content */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  /* larger heading */
+  color: #2e7d32;
+  /* deep green */
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.3rem;
+  /* bigger paragraph text */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* =========================
    ABOUT GALLERY STYLES
    ========================= */
 .about-gallery {
@@ -6,42 +39,22 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .about-gallery img {
-  width: 280px;       /* increased from 180px */
-  height: 200px;      /* increased from 130px */
+  width: 280px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3); /* unified glow */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
-
-/* Responsive adjustments for About Gallery */
-@media (max-width: 768px) {
-  .about-gallery img {
-    width: 45%;       /* two images per row on tablets */
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-gallery img {
-    width: 90%;       /* larger single column on phones */
-    height: auto;
-  }
-}
-
 
 /* =========================
    TEAM SECTION STYLES
@@ -68,19 +81,20 @@
   background: #fff;
   border-radius: 10px;
   padding: 1.5rem;
-  width: 220px; /* medium size */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .team-card:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* unified glow */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .team-card img {
   width: 100%;
-  height: 140px; /* reduced height for medium size */
+  height: 140px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -96,80 +110,16 @@
   color: #555;
 }
 
-/* Responsive adjustments for Team Section */
-@media (max-width: 768px) {
-  .team-card {
-    width: 45%;   /* two cards per row on tablets */
-  }
-
-  .team-card img {
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .team-card {
-    width: 80%;   /* full width on phones */
-  }
-
-  .team-card img {
-    height: auto; /* auto height for small screens */
-  }
-}
-
-css
-.about-content {
-  max-width: 800px;
-  text-align: center;   /* centers all text */
-  margin-bottom: 2rem;
-}
-
-.about h1 {
-  font-size: 3rem;      /* increased from 2.5rem */
-  color: #2e7d32;       /* deep green */
-  margin-bottom: 1rem;
-  text-align: center;   /* ensures heading is centered */
-}
-
-.about p {
-  font-size: 1.4rem;    /* increased from 1.2rem */
-  color: #333;
-  margin-bottom: 1rem;
-  line-height: 1.8;     /* more spacing for readability */
-  text-align: center;   /* centers paragraphs */
-}
-
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;          /* centers the block itself */
-  text-align: center;      /* centers all text inside */
-  padding: 2rem;
-}
-
-.about-content h1 {
-  font-size: 3rem;         /* larger heading */
-  color: #2e7d32;          /* deep green */
-  margin-bottom: 1.5rem;
-}
-
-.about-content p {
-  font-size: 1.3rem;       /* bigger paragraph text */
-  line-height: 1.8;        /* more spacing for readability */
-  color: #333;
-  margin-bottom: 1rem;
-}
+/* =========================
+   FOOTER STYLES
+   ========================= */
 .about-footer {
-  background-color: #2e7d32; /* deep green */
+  background-color: #2e7d32;
   color: #fff;
   text-align: center;
   padding: 2.5rem 1rem;
   margin-top: 3rem;
-  border-top: 4px solid #ffcc00; /* accent line */
+  border-top: 4px solid #ffcc00;
 }
 
 .about-footer h2 {
@@ -198,11 +148,6 @@ css
   color: #ffaa00;
 }
 
-.footer-note {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #ddd;
-}
 .back-to-top {
   margin-top: 1.5rem;
   background-color: #ffcc00;
@@ -219,4 +164,65 @@ css
 .back-to-top:hover {
   background-color: #ffaa00;
   transform: translateY(-3px);
+}
+
+.footer-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* =========================
+   RESPONSIVE STYLES
+   ========================= */
+@media (max-width: 768px) {
+  .about-gallery img {
+    width: 45%;
+    height: auto;
+  }
+
+  .team-card {
+    width: 45%;
+  }
+
+  .team-card img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 80%;
+  }
+
+  .team-card img {
+    height: auto;
+  }
+
+  .back-to-top {
+    width: 100%;
+  }
 }

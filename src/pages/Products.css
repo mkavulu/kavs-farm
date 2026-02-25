@@ -1,11 +1,22 @@
+/* =========================
+   GLOBAL SECTION STYLES
+   ========================= */
+section {
+  padding: 3rem 2rem;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   PRODUCTS PAGE STYLES
+   ========================= */
 .products {
   background: linear-gradient(to right, #f9fff9, #e6ffe6);
   min-height: 100vh;
-  padding: 0; /* remove padding so banner spans full width */
+  padding: 0; /* banner spans full width */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Banner styles */
 .products-banner {
   background-color: #2e7d32; /* deep green bar */
   color: #fff;
@@ -23,7 +34,6 @@
   font-weight: 300;
 }
 
-/* Product grid */
 .product-grid {
   display: flex;
   gap: 2rem;
@@ -37,6 +47,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   width: 250px;
+  text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -44,14 +55,6 @@
 .product-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-.product-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .product-card h3 {
@@ -66,65 +69,157 @@
   margin-bottom: 1rem;
 }
 
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 .order-btn {
-  background-color: #ffcc00;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffcc00, #ffaa00);
   color: #333;
-  padding: 10px 18px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .order-btn:hover {
-  background-color: #ffaa00;
+  background: linear-gradient(135deg, #ffaa00, #ff8800);
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .product-card {
-    width: 45%;   /* two cards per row */
-  }
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+.about {
+  background-color: #f9fff9;
 }
 
-@media (max-width: 768px) {
-  .product-card {
-    width: 80%;   /* one card per row */
-  }
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
 }
 
-@media (max-width: 480px) {
-  .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-card {
-    width: 90%;   /* full width on phones */
-  }
-
-  .product-img {
-    height: auto;
-  }
+.about-content h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
 }
 
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
 
-/* Footer styles */
+.about-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.about-gallery img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.team-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.team-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================
+   FOOTER STYLES (Unified)
+   ========================= */
+.about-footer,
 .products-footer {
-  background-color: #2e7d32; /* deep green */
+  background-color: #2e7d32;
   color: #fff;
   text-align: center;
   padding: 2.5rem 1rem;
   margin-top: 3rem;
-  border-top: 4px solid #ffcc00; /* accent line */
+  border-top: 4px solid #ffcc00;
 }
 
+.about-footer h2,
 .products-footer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+.about-footer p,
 .products-footer p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -146,71 +241,103 @@
   color: #ffaa00;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #ffaa00;
+  transform: translateY(-3px);
+}
+
 .footer-note {
   margin-top: 1.5rem;
   font-size: 0.9rem;
   color: #ddd;
 }
 
-
-.back-to-top {
-  margin-top: 1.5rem;
-  background-color: #ffcc00;
-  color: #333;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* =========================
+   RESPONSIVE STYLES
+   ========================= */
+@media (max-width: 1024px) {
+  .product-card {
+    width: 45%;
+  }
 }
 
-.back-to-top:hover {
-  background-color: #ffaa00;
-  transform: translateY(-3px);
-}
-.back-to-top {
-  position: fixed;       /* makes it float */
-  bottom: 20px;          /* distance from bottom */
-  right: 20px;           /* distance from right */
-  background-color: #ffcc00;
-  color: #333;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 50px;   /* rounded pill shape */
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 1000;         /* ensures it stays above other elements */
-}
+@media (max-width: 768px) {
+  .about-gallery img {
+    width: 45%;
+    height: auto;
+  }
 
-.back-to-top:hover {
-  background-color: #ffaa00;
-  transform: translateY(-3px);
+  .team-card {
+    width: 45%;
+  }
+
+  .team-card img {
+    height: 120px;
+  }
+
+  .product-card {
+    width: 80%;
+  }
 }
 
+@media (max-width: 480px) {
+  .about-content h1,
+  .products-banner h1 {
+    font-size: 2rem;
+  }
 
-.order-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #ffcc00, #ffaa00); /* nice gradient */
-  color: #333;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px; /* pill shape */
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none; /* remove underline from Link */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  .about-content p,
+  .products-banner p {
+    font-size: 1rem;
+  }
+
+  .about-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card,
+  .product-card {
+    width: 90%;
+  }
+
+  .team-card img,
+  .product-card img {
+    height: auto;
+  }
+
+  .back-to-top {
+    width: 100%;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
-.order-btn:hover {
-  background: linear-gradient(135deg, #ffaa00, #ff8800);
-  color: #fff;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-}
-
