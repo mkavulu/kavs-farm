@@ -33,6 +33,9 @@ function Navbar() {
           <Link to="/about" onClick={closeMenu}>About</Link>
         </li>
         <li>
+          <Link to="/gallery" onClick={closeMenu}>Gallery</Link> {/* ✅ New Gallery link */}
+        </li>
+        <li>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </li>
       </ul>
