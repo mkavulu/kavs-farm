@@ -30,6 +30,12 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const subject = `Contact from ${form.user_name}`;
+    const body = `Name: ${form.user_name}
+Email: ${form.user_email}
+Message: ${form.message}`;
+
     emailjs
       .sendForm(
         "service_jjlpruc",
@@ -44,7 +50,11 @@ function Contact() {
         },
         (error) => {
           console.error("EmailJS Error:", error);
-          window.location.href = `mailto:kavsenterprises2000@gmail.com?subject=Contact from ${form.user_name}&body=Name: ${form.user_name}%0AEmail: ${form.user_email}%0AMessage: ${form.message}`;
+
+          // Fallback to default mail app
+          window.location.href = `mailto:kavsenterprises2000@gmail.com?subject=${encodeURIComponent(
+            subject
+          )}&body=${encodeURIComponent(body)}`;
         }
       );
   };
@@ -76,7 +86,9 @@ function Contact() {
           onChange={handleChange}
           required
         ></textarea>
-        <button type="submit" className="submit-btn">Send Message</button>
+        <button type="submit" className="submit-btn">
+          Send Message
+        </button>
       </form>
     </div>
   );

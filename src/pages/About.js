@@ -59,9 +59,29 @@ function About() {
                 <p>📞 Phone: +254 710 165 356</p>
                 <p>✉️ Email: kavsenterprises2000@gmail.com</p>
                 <div className="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+                    <a
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
+
+                    <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Twitter
+                    </a>
                 </div>
 
                 {/* Back to Top Button */}
